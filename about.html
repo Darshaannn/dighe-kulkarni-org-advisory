@@ -21,6 +21,26 @@
     <link rel="stylesheet" href="style.css?v=63">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(21, 50, 57, 0.55), rgba(32, 70, 80, 0.55)), url('images/hero_banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 220px 0 140px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to top, #F8FAFC, transparent);
+        }
+
         .who-we-are-section {
             background-color: #F8FAFC;
             padding: 100px 0;
@@ -182,7 +202,7 @@
                                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="organization-design.html">Organisation Design & Effectiveness</a></li>
-                    <li><a href="leadership-assessments.html">Leadership Impact</a></li>
+                    <li><a href="leadership-impact.html">Leadership Impact</a></li>
                     <li><a href="about.html" class="active-link">About Us</a></li>
                     <li><a href="blogs.html">Insights</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -195,15 +215,23 @@
     </header>
 
 
+    <!-- HERO -->
+    <section class="service-hero animate-on-scroll">
+        <div class="container text-center" style="max-width: 950px; position: relative; z-index: 2;">
+            <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 15px;">About DKOA</span>
+            <h1 style="color: #ffffff; font-size: 3.8rem; margin-bottom: 25px; line-height: 1.2; text-align: center;">We believe organisations scale through effective execution, not structure alone.</h1>
+            <p style="color: #ffffff; font-size: 1.3rem; line-height: 1.6; opacity: 0.95; margin: 0 auto; text-align: center;">Helping founder-led, PE-backed, and growing businesses get the underlying systems right for long-term scale.</p>
+        </div>
+    </section>
+
     <!-- WHO WE ARE -->
     <section class="who-we-are-section animate-on-scroll">
         <div class="container">
             <div class="who-we-are-grid">
                 <div style="text-align: left;">
                     <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 12px;">Who We Are</span>
-                    <h2 style="font-size: 2.8rem; color: var(--primary-color); margin-bottom: 25px; line-height: 1.2;">We believe organisations scale through effective execution, not structure alone.</h2>
+                    <h2 style="font-size: 2.8rem; color: var(--primary-color); margin-bottom: 25px; line-height: 1.2;">Execution challenges rarely come from strategy. They emerge from how the organisation functions in practice.</h2>
                     <p style="font-size: 1.15rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 15px;">As organisations grow, complexity increases across leadership, decision-making, governance, operating cadence, and cross-functional integration.</p>
-                    <p style="font-size: 1.15rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 15px;">Execution challenges rarely come from strategy. They emerge from how the organisation functions in practice.</p>
                     <p style="font-size: 1.15rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 25px;">DKOA helps founder-led, PE-backed, and growing businesses get the underlying systems right, so execution holds as the business scales. The work spans organisation design, operating effectiveness, governance, and leadership capability.</p>
                     <div style="border-left: 4px solid var(--accent-gold); padding-left: 20px; background: #ffffff; padding: 20px 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
                         <p style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--primary-color); line-height: 1.6;">Deep organisational expertise, applied in a practical, hands-on way and built for evolving businesses.</p>
