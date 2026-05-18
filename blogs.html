@@ -329,23 +329,14 @@
     </footer>
 
     <!-- Dynamic Blogs Script -->
-    <script type="module">
-        import { client, urlFor } from './js/sanity_client.js';
-
+    <script>
         document.addEventListener('DOMContentLoaded', async () => {
             const grid = document.getElementById('blog-grid-container');
 
             try {
-                const query = `*[_type == "post"] | order(_createdAt desc) {
-                    title,
-                    slug,
-                    excerpt,
-                    mainImage,
-                    readingTime,
-                    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ) + 1
-                }`;
-
-                const blogs = await client.fetch(query);
+                const response = await fetch('blogs.json');
+                if (!response.ok) throw new Error('Failed to load blogs.json');
+                const blogs = await response.json();
 
                 grid.innerHTML = '';
 
@@ -361,24 +352,15 @@
                 const html = blogs.map((blog, index) => {
                     const title = blog.title || 'Untitled Publication';
                     const excerpt = blog.excerpt || '';
-                    const readTime = blog.readingTime ? `${blog.readingTime} min read` : `${blog.estimatedReadingTime || 5} min read`;
-
-                    let imageUrl = 'images/logo.png';
-                    if (blog.mainImage) {
-                        try {
-                            imageUrl = urlFor(blog.mainImage).width(400).url();
-                        } catch (e) {
-                            console.warn('Image generation failed', e);
-                        }
-                    }
-
-                    const link = `blog-details.html?slug=${blog.slug.current}`;
+                    const readTime = blog.readTime || '5 min read';
+                    const imageUrl = blog.image || 'images/logo.png';
+                    const link = `blog-${blog.slug}.html`;
                     const delay = index * 0.1;
 
                     return `
                     <div class="blog-card animate-on-scroll" style="animation-delay: ${delay}s">
                         <div class="blog-img">
-                            <img src="${imageUrl}" alt="${title}">
+                            <img src="${imageUrl}" alt="${title}" loading="lazy">
                             <span class="read-tag">${readTime}</span>
                         </div>
                         <div class="blog-content">
@@ -412,7 +394,7 @@
                 console.error('Error loading blogs:', err);
                 grid.innerHTML = `
                     <div style="grid-column: 1/-1; text-align: center; padding: 40px 0;">
-                        <p style="font-size: 1.2rem; color: var(--text-dark);">Unable to load articles from server. Please check your connection.</p>
+                        <p style="font-size: 1.2rem; color: var(--text-dark);">Unable to load articles. Please check your connection.</p>
                     </div>
                 `;
             }

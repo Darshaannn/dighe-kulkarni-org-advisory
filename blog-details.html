@@ -154,65 +154,15 @@
 
     <!-- JS -->
     <script src="script.js?v=4"></script>
-    <script type="module">
-        import { client, urlFor } from './js/sanity_client.js';
-        import { toHTML } from 'https://esm.sh/@portabletext/to-html';
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            // Get slug from URL parameters
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const slug = urlParams.get('slug');
 
-            if (!slug) {
-                document.getElementById('blog-loader').innerText = 'Blog post not found.';
-                return;
-            }
-
-            try {
-                // Sanity GROQ Query for single post
-                const query = `*[_type == "post" && slug.current == $slug][0]{
-                    title,
-                    mainImage,
-                    body
-                }`;
-
-                const post = await client.fetch(query, { slug });
-
-                if (!post) {
-                    throw new Error('Post not found');
-                }
-
-                // Update UI
-                document.title = `${post.title} | Dighe Kulkarni Org Advisors`;
-                document.getElementById('post-title').innerText = post.title;
-
-                // Render Body (Portable Text to HTML)
-                // Custom components configuration for images inside body
-                const myPortableTextComponents = {
-                    types: {
-                        image: ({ value }) => {
-                            if (!value?.asset?._ref) {
-                                return '';
-                            }
-                            return `
-                < figure >
-                <img src="${urlFor(value).width(800).url()}" alt="${value.alt || ' '}" />
-                                </figure >
-                              `;
-                        }
-                    }
-                };
-
-                const bodyHtml = toHTML(post.body, { components: myPortableTextComponents });
-                document.getElementById('post-body').innerHTML = bodyHtml;
-
-                // Show content
-                document.getElementById('blog-loader').style.display = 'none';
-                document.getElementById('blog-content').style.display = 'block';
-
-            } catch (err) {
-                console.error(err);
-                document.getElementById('blog-loader').innerText = 'Error loading blog post. It may not exist.';
+            if (slug) {
+                window.location.replace(`blog-${slug}.html`);
+            } else {
+                window.location.replace('blogs.html');
             }
         });
     </script>
