@@ -15,14 +15,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights & FAQs | Dighe Kulkarni Org Advisors</title>
+    <title>Frequently Asked Questions | Dighe Kulkarni Org Advisors</title>
+    <meta name="description" content="Answers to common questions about organisation design, leadership effectiveness, and our advisory approach at Dighe Kulkarni Org Advisors.">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css?v=64">
+    <link rel="stylesheet" href="style.css?v=65">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .service-hero {
-            background: linear-gradient(135deg, rgba(21, 50, 57, 0.55), rgba(32, 70, 80, 0.55)), url('images/hero_banner.jpg');
+        .faq-hero {
+            background: linear-gradient(135deg, rgba(21, 50, 57, 0.75), rgba(32, 70, 80, 0.75)), url('images/hero_banner.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -31,7 +32,7 @@
             color: #fff;
             position: relative;
         }
-        .service-hero::after {
+        .faq-hero::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -116,7 +117,7 @@
                 <img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" width="1996" height="615">
             </div>
             <nav>
-                                <ul class="nav-links">
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="organization-design.html">Organisation Design & Effectiveness</a></li>
                     <li><a href="leadership-assessments.html">Leadership Impact</a></li>
@@ -131,36 +132,18 @@
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="service-hero animate-on-scroll">
-        <div class="container text-center" style="max-width: 950px; position: relative; z-index: 2;">
-            <h1 style="color: #ffffff; font-size: 3.8rem; line-height: 1.25; margin: 0 auto 25px; text-align: center; font-weight: 700;">Perspectives on organisation and leadership effectiveness.</h1>
-            <p style="color: #ffffff; font-size: 1.35rem; line-height: 1.6; opacity: 0.95; margin: 0 auto; text-align: center;">Insights on scaling organisations, leadership capability, operating effectiveness, governance, and organisational transformation.</p>
+    <!-- Hero -->
+    <section class="faq-hero animate-on-scroll">
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 15px;">Clarification & Detail</span>
+            <h1 style="font-size: 3.8rem; font-weight: 700; margin-bottom: 20px; line-height: 1.1; color: #ffffff;">Frequently Asked Questions</h1>
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto; color: #ffffff; opacity: 0.95; line-height: 1.6;">Answers to common questions about organisation design, our advisory approach, and how we partner with scaling businesses.</p>
         </div>
     </section>
 
-    <!-- Blog Grid Section -->
-    <section class="blogs-section animate-on-scroll" style="padding: 100px 0; background-color: #F8FAFC;">
-        <div class="container" style="max-width: 1300px;">
-            <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 12px;">Latest Thinking</span>
-            <h2 class="section-title text-center" style="font-size: 3.2rem; margin-bottom: 60px;">Articles & Publications</h2>
-
-            <div class="blog-grid" id="blog-grid-container">
-                <!-- Blogs will be loaded here dynamically by the script below -->
-                <div style="grid-column: 1/-1; text-align: center; padding: 60px;">
-                    <i class="fa-solid fa-spinner fa-spin" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
-                    <p style="font-size: 1.2rem; color: var(--text-dark);">Loading latest insights...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Page 5A) -->
-    <section class="faq-section animate-on-scroll" style="padding: 100px 0; background-color: #ffffff;">
+    <!-- FAQ Accordion Section -->
+    <section style="padding: 100px 0; background-color: #F8FAFC;" class="animate-on-scroll">
         <div class="container" style="max-width: 950px;">
-            <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 12px;">Clarification & Detail</span>
-            <h2 class="section-title text-center" style="font-size: 3.2rem; margin-bottom: 60px;">Frequently Asked Questions</h2>
-
             <div class="faq-list" style="max-width: 100%; margin: 0;">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item faq-item-premium">
@@ -286,6 +269,15 @@
         </div>
     </section>
 
+    <!-- Call to Action -->
+    <section class="cta-section animate-on-scroll" style="padding: 100px 0; background: var(--primary-color); color: #ffffff; text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="font-size: 3rem; margin-bottom: 25px; color: #ffffff; font-weight: 700;">Have a Specific Question?</h2>
+            <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 40px; line-height: 1.6;">Reach out to talk through what you’re facing or explore how our advisory partnership can support your growth.</p>
+            <a href="contact.html" class="btn btn-gold" style="font-size: 1.1rem; padding: 16px 36px;">Schedule a Conversation <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -327,97 +319,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Dynamic Blogs Script -->
-    <script type="module">
-        import { client, urlFor } from './js/sanity_client.js';
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            const grid = document.getElementById('blog-grid-container');
-
-            try {
-                const query = `*[_type == "post"] | order(_createdAt desc) {
-                    title,
-                    slug,
-                    excerpt,
-                    mainImage,
-                    readingTime,
-                    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ) + 1
-                }`;
-
-                const blogs = await client.fetch(query);
-
-                grid.innerHTML = '';
-
-                if (blogs.length === 0) {
-                    grid.innerHTML = `
-                        <div style="grid-column: 1/-1; text-align: center;">
-                            <p>No articles found. Please check back later.</p>
-                        </div>
-                    `;
-                    return;
-                }
-
-                const html = blogs.map((blog, index) => {
-                    const title = blog.title || 'Untitled Publication';
-                    const excerpt = blog.excerpt || '';
-                    const readTime = blog.readingTime ? `${blog.readingTime} min read` : `${blog.estimatedReadingTime || 5} min read`;
-
-                    let imageUrl = 'images/logo.png';
-                    if (blog.mainImage) {
-                        try {
-                            imageUrl = urlFor(blog.mainImage).width(400).url();
-                        } catch (e) {
-                            console.warn('Image generation failed', e);
-                        }
-                    }
-
-                    const link = `blog-details.html?slug=${blog.slug.current}`;
-                    const delay = index * 0.1;
-
-                    return `
-                    <div class="blog-card animate-on-scroll" style="animation-delay: ${delay}s">
-                        <div class="blog-img">
-                            <img src="${imageUrl}" alt="${title}">
-                            <span class="read-tag">${readTime}</span>
-                        </div>
-                        <div class="blog-content">
-                            <h2>${title}</h2>
-                            <p>${excerpt}</p>
-                            <a href="${link}" class="read-more-btn">Read full article <i class="fa-solid fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                    `;
-                }).join('');
-
-                grid.innerHTML = html;
-
-                const newElements = grid.querySelectorAll('.animate-on-scroll');
-                if ("IntersectionObserver" in window) {
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add("in-view");
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, { threshold: 0.1 });
-
-                    newElements.forEach(el => observer.observe(el));
-                } else {
-                    newElements.forEach(el => el.classList.add('in-view'));
-                }
-
-            } catch (err) {
-                console.error('Error loading blogs:', err);
-                grid.innerHTML = `
-                    <div style="grid-column: 1/-1; text-align: center; padding: 40px 0;">
-                        <p style="font-size: 1.2rem; color: var(--text-dark);">Unable to load articles from server. Please check your connection.</p>
-                    </div>
-                `;
-            }
-        });
-    </script>
 
     <!-- JS -->
     <script src="script.js"></script>

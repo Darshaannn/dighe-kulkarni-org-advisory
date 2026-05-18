@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/talent-assessment.html", "destination": "/organization-design.html", "statusCode": 301 },
+    { "source": "/culture-activation.html", "destination": "/organization-design.html", "statusCode": 301 },
+    { "source": "/people-systems.html", "destination": "/organization-design.html", "statusCode": 301 },
+    { "source": "/careers.html", "destination": "/about.html", "statusCode": 301 }
+  ]
 }
